@@ -23,7 +23,7 @@ from huggingface_hub import from_pretrained_keras
 now = datetime.datetime.now()
 task_id = now.strftime("%y%m%d%H%M%S") + str(random.randint(100, 999))
 path = "/Volumes/shubham_test/test_volume/volume_shubham"
-tmp_path = rf"prefix_{task_id}.h5"
+tmp_path = rf"/databricks/driver/{task_id}.h5"
 save_model(model, tmp_path)
 print("test1")
 
